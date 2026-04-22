@@ -1,21 +1,18 @@
-ArrayList <String> Names = new ArrayList();
 
-void setup() {
-  size (400, 400);
-  fill(255);
-  textSize(25);
-  Names.add ("Vihanga");
-  Names.add ("Kaushalya");
-  Names.add ("Kodithuwakku");
+
+void setup () {
+  size (500, 500);
+  fill(0, 0, 255);
 }
-
-void draw () {
-  int yPos = 100;
-  background(0);
-  for ( String Name : Names )
-  {
-    text(Name, 120, yPos);
-    yPos = yPos + 100;
-    println(Names);
-  }
+void draw() {
+  target(random(20, 300), random(30, 400));
+  target(mouseX,mouseY);
+}
+void target(float xPos, float yPos) {
+  fill(#EA1AB0);
+  circle(xPos, yPos, 180);
+  fill(0, 255, 0);
+  circle(xPos, yPos, 120);
+  fill(255, 0, 0);
+  circle(xPos, yPos, 60);
 }
